@@ -123,6 +123,8 @@ void PortMonitorLinux::ParseNetFile(const std::string& filepath, const std::stri
         info.appName = appName;
         info.companyName = "---";
         info.userName = userName;
+
+        portsList.push_back(info);
     }
 }
 

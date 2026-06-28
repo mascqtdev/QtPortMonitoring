@@ -12,8 +12,8 @@ std::vector<PortInfo> PortMonitor::GetActivePorts(int protocolType) {
     PortMonitorWin win(protocolType);
     win.GatherWindowsPorts(portsList);
 #elif defined(__linux__)
-    PortMonitorLinux linux(protocolType)
-    linux.GatherLinuxPorts(portsList);
+    PortMonitorLinux linuxPort(protocolType);
+    linuxPort.GatherLinuxPorts(portsList);
 #endif
     return portsList;
 }
